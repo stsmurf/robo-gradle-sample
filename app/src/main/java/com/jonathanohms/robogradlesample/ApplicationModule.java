@@ -1,7 +1,11 @@
 package com.jonathanohms.robogradlesample;
 
-/**
- * Created by smurf on 4/7/15.
- */
-public class ApplicationModule {
+import com.google.inject.AbstractModule;
+
+public class ApplicationModule extends AbstractModule {
+
+    @Override
+    protected void configure() {
+        // TODO - Bind interfaces to real classes here
+    }
 }
