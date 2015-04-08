@@ -25,3 +25,9 @@ proguard/
 
 # Log Files
 *.log
+
+# IntelliJ Files
+.idea
+app/app.iml
+robo-gradle-sample.iml
+test/test.iml

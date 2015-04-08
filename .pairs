@@ -1,0 +1,7 @@
+pairs:
+  jo: Jonathan Ohms; stsmurf
+
+email:
+  prefix: pair
+  domain: gmail.com
+  no_solo_prefix: true

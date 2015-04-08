@@ -1,0 +1,33 @@
+apply plugin: 'java'
+
+//repositories {
+//    flatDir { dirs 'libs' }
+//}
+
+evaluationDependsOn(':app')
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    def androidModule = project(':app')
+    compile androidModule
+
+    testCompile androidModule.android.applicationVariants.toList().first().javaCompile.classpath
+    testCompile androidModule.android.applicationVariants.toList().first().javaCompile.outputs.files
+    testCompile files(androidModule.plugins.findPlugin("com.android.application").getBootClasspath())
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.robolectric:robolectric:2.4'
+    testCompile 'org.assertj:assertj-core:1.7.0'
+
+    testCompile 'org.mockito:mockito-core:1.9.5'
+    testCompile('com.squareup:fest-android:1.0.8') {
+        exclude module: 'support-v4'
+    }
+}
+
+// prevent the "superClassName is empty" error for classes not annotated as tests
+//tasks.withType(Test) {
+//    scanForTestClasses = false
+//    include "**/*Test.class" // whatever Ant pattern matches your test class files
+//}
