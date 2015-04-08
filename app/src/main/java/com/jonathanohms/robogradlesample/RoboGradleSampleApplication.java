@@ -8,6 +8,11 @@ import roboguice.RoboGuice;
 
 public class RoboGradleSampleApplication extends Application {
 
+    public static String getRootURL() {
+//        return "http://192.168.56.1:3000/"; // Genymotion localhost
+        return "http://api.example.com";
+    }
+
     @Override
     public void onCreate() {
         super.onCreate();

@@ -6,6 +6,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
 import com.jonathanohms.robogradlesample.RoboGradleSampleApplication;
+import com.jonathanohms.robogradlesample.newtworking.RestAdapterBuilderProviderTest;
 
 import org.junit.runners.model.InitializationError;
 import org.mockito.MockitoAnnotations;
@@ -17,6 +18,7 @@ import org.robolectric.annotation.Config;
 
 import java.lang.reflect.Method;
 
+import retrofit.RestAdapter;
 import roboguice.RoboGuice;
 
 public class RobolectricTestRunnerWithInjection extends RobolectricTestRunner {
@@ -29,6 +31,8 @@ public class RobolectricTestRunnerWithInjection extends RobolectricTestRunner {
 
         @Override
         protected void configure() {
+            bind(RestAdapter.Builder.class).toProvider(RestAdapterBuilderProviderTest.class).asEagerSingleton();
+
             // TODO - Bind Interfaces to Fakes here for tests
         }
     }
