@@ -2,17 +2,18 @@ package com.jonathanohms.robogradlesample;
 
 import android.widget.TextView;
 
+import com.jonathanohms.robogradlesample.test.support.RobolectricTestRunnerWithInjection;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.robolectric.Robolectric;
-import org.robolectric.RobolectricTestRunner;
 import org.robolectric.annotation.Config;
 import org.robolectric.util.ActivityController;
 
 import static org.fest.assertions.api.Assertions.assertThat;
 import static org.fest.assertions.api.ANDROID.assertThat;
 
-@RunWith(RobolectricTestRunner.class)
+@RunWith(RobolectricTestRunnerWithInjection.class)
 @Config(emulateSdk=18, manifest="app/src/main/AndroidManifest.xml")
 public class MainActivityTest {
 
