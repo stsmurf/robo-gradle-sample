@@ -1,4 +1,4 @@
-package com.jonathanohms.robogradlesample.newtworking;
+package com.jonathanohms.robogradlesample.networking;
 
 import android.support.annotation.NonNull;
 

@@ -6,7 +6,7 @@ import com.google.inject.AbstractModule;
 import com.google.inject.Module;
 import com.google.inject.util.Modules;
 import com.jonathanohms.robogradlesample.RoboGradleSampleApplication;
-import com.jonathanohms.robogradlesample.newtworking.RestAdapterBuilderProviderTest;
+import com.jonathanohms.robogradlesample.networking.RestAdapterBuilderProviderTest;
 
 import org.junit.runners.model.InitializationError;
 import org.mockito.MockitoAnnotations;
