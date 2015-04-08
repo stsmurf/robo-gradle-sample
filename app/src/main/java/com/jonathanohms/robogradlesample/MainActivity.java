@@ -1,19 +1,23 @@
 package com.jonathanohms.robogradlesample;
 
-import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
+import roboguice.activity.RoboActivity;
+import roboguice.inject.InjectView;
 
-public class MainActivity extends Activity {
+public class MainActivity extends RoboActivity {
+
+    @InjectView(R.id.hello_world_text_view) private TextView helloWorldTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_activity);
+        helloWorldTextView.setText("HELLO WORLD!");
     }
-
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

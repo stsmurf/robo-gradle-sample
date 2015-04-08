@@ -24,6 +24,6 @@ public class MainActivityTest {
 
         assertThat(mainActivity).isNotNull();
         TextView textView = (TextView) mainActivity.findViewById(R.id.hello_world_text_view);
-        assertThat(textView).hasText("Hello world!");
+        assertThat(textView).hasText("HELLO WORLD!");
     }
 }
